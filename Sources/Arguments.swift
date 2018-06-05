@@ -1,12 +1,12 @@
-struct Arguements: Sequence, IteratorProtocol {
+public struct Arguements: Sequence, IteratorProtocol {
 	
 	private var characters: String
 	
-	init(string: String) {
+	public init(string: String) {
 		self.characters = string
 	}
 	
-	mutating func next() -> String? {
+	public mutating func next() -> String? {
 		guard characters.count > 0 else { return nil }
 		var result = [Character]()
 		var character: Character
